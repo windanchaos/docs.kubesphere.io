@@ -104,12 +104,11 @@ CI/CD 流水线会根据文档网站的 [yaml 模板文件](https://github.com/k
 可视化编辑页面，分为结构编辑区域和内容编辑区域。通过构建流水线的每个阶段 (stage) 和步骤 (step) 即可自动生成 Jenkinsfile，用户无需学习 Jenkinsfile 的语法，非常方便。当然，平台也支持手动编辑 Jenkinsfile 的方式，流水线分为 “声明式流水线” 和 “脚本化流水线”，可视化编辑支持声明式流水线。Pipeline 语法参见 [Jenkins 官方文档](https://jenkins.io/doc/book/pipeline/syntax/)。
 
 1、如下，此处代理的类型选择 `node`，label 填写 `maven`。
-
+![](https://pek3b.qingstor.com/kubesphere-docs/png/20190514132128.png)
 > 说明：代理 (Agent) 部分指定整个 Pipeline 或特定阶段将在 Jenkins 环境中执行的位置，具体取决于该 agent 部分的放置位置，详见 [Jenkins Agent 说明](../../devops/jenkins-agent)。
 
 2、在图形化构建流水线的界面，点击左侧结构编辑区域的 **“+”** 号，增加一个阶段 (Stage)，点击界面中的 **添加步骤**，在右侧输入框将其命名为 **Checkout SCM**。
 
-![](https://pek3b.qingstor.com/kubesphere-docs/png/20190514132128.png)
 
 3、然后在此阶段下点击 `添加步骤`。右侧选择 `git`，此阶段通过 Git 拉取仓库的代码，弹窗中填写的信息如下：
 
